@@ -12,7 +12,7 @@ use Illuminate\Queue\SerializesModels;
 class SpeedControlEmail extends Mailable
 {
     use Queueable, SerializesModels;
-    public $url = 'http://127.0.0.1:8000/account/validate/';
+    public $url = 'http://68.183.225.134:8004/account/validate/';
 
     /**
      * Create a new message instance.
