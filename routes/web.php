@@ -21,7 +21,7 @@ use App\Http\Livewire\Home\DeviceManagement\ListDeviceData;
 
 Route::middleware(['checkstatus'])->group(function () {
     Route::get('/', function (){ return redirect()->route('home'); });
-    Route::get('/dashboard', Dashboard::class)->name("home");
+    Route::get('/home', Dashboard::class)->name("home");
     Route::get('/device/list-device', ListDevice::class);
     Route::get('/device/list-data', ListDeviceData::class);
 });

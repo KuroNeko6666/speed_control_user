@@ -35,10 +35,11 @@ class Register extends Component
             ];
             $data = EmailVerification::create($validation);
             Mail::to($user->email)->send(new SpeedControlEmail($data->token));
+            session()->flash('success', 'Akun Berhasil didaftarkan, verifikasi terlebih dahulu.');
             return redirect()->route("login");
 
         } catch(QueryException $e){
-            dd($e);
+            session()->flash('error', 'Gagal mendaftar');
         }
 
     }

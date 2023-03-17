@@ -40,7 +40,7 @@
         <!-- partial -->
         <div class="container-fluid page-body-wrapper">
             <!-- partial:partials/_settings-panel.html -->
-            @livewire('components.settings-panel')
+            {{-- @livewire('components.settings-panel') --}}
             <!-- partial -->
             @livewire('components.sidebar')
 
